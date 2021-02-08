@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
+
 void encryptMsg(char msg[], int key){
     int msgLen = strlen(msg), i, j, k = -1, row = 0, col = 0;
     char railMatrix[key][msgLen];
@@ -16,14 +17,19 @@ void encryptMsg(char msg[], int key){
         row = row + k;
     }
     cout<<"\nEncrypted Message: ";
+    
     for(i = 0; i < key; ++i)
         for(j = 0; j < msgLen; ++j)
             if(railMatrix[i][j] != '\n')
                 cout<<railMatrix[i][j];
 }
 int main(){
-    char msg[] = "meetmeafterthetogaparty";
-    int key = 2;
+    char msg[50];
+    int key ;
+    cout<<"enter the msg: ";
+    cin >> msg;
+    cout << "enter the key: ";
+    cin >> key;
     cout<<"Plain text: "<<msg;
     encryptMsg(msg, key);
     return 0;
