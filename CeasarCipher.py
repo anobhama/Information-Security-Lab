@@ -13,13 +13,13 @@ def decrypt(s, text):
     alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     result = ""
 
-    for letter in text:
-        if letter in alpha:
-            letter_index = (alpha.find(letter) - s) % len(alpha)
+    for i in text:
+        if i in alpha:
+            i_index = (alpha.find(i) - s) % 26
 
-            result = result + alpha[letter_index]
+            result = result + alpha[i_index]
         else:
-            result = result + letter
+            result = result + i
 
     print("decrypted text is ",result.lower())
 text = input("enter the text: ")
