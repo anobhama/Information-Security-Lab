@@ -1,4 +1,4 @@
-  # Vigenere Cipher 
+# Vigenere Cipher 
 
 def generateKey(string, keyword): 
 	key = list(keyword) 
@@ -20,11 +20,11 @@ def cipherText(string, keyword):
 def originalText(cipher_text, keyword): 
 	orig_text = [] 
 	for i in range(len(cipher_text)): 
-		x = (ord(cipher_text[i]) -ord(key[i]) + 26) % 26
+		x = (ord(cipher_text[i]) - ord(key[i]) + 26) % 26
 		x += ord('A') 
 		orig_text.append(chr(x)) 
 	return("" . join(orig_text)) 
-	
+
 string = input("Enter the text: ")
 keyword = input("Enter the keywrd: ")
 key = generateKey(string, keyword) 

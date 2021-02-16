@@ -3,6 +3,7 @@
 using namespace std;
 
 void encryptMsg(char msg[], int key){
+    
     int msgLen = strlen(msg), i, j, k = -1, row = 0, col = 0;
     char railMatrix[key][msgLen];
     
